@@ -19,13 +19,12 @@ class Circulo extends GameObject{
   public void mover(float deltaTime){
     this.posicion.x += this.velocidad.x * deltaTime;
     this.posicion.y += this.velocidad.y * deltaTime;
-    validarRebote();
   }
-  private void validarRebote(){
-    if(this.posicion.x >= width - this.diametro/2 || this.posicion.x <= 0 + this.diametro/2){
+  public void validarRebote(){
+    if(this.posicion.x > width - this.diametro/2 || this.posicion.x < 0 + this.diametro/2){
       this.velocidad.x *= -1;
     }
-    if(this.posicion.y >= height - this.diametro/2 || this.posicion.y <= 0 + this.diametro/2){
+    if(this.posicion.y > height - this.diametro/2 || this.posicion.y < 0 + this.diametro/2){
       this.velocidad.y *= -1;
     }
   }
