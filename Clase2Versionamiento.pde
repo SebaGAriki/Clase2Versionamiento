@@ -20,5 +20,4 @@ public void draw(){
   miCirculo.dibujar();
   miCirculo.validarRebote();
   miCirculo.mover(deltaTime);
-  
 }
