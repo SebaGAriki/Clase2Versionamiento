@@ -16,9 +16,9 @@ class Circulo extends GameObject{
     fill(this.miColor);
     circle(this.posicion.x, this.posicion.y, this.diametro);
   }
-  public void mover(){
-    this.posicion.x += this.velocidad.x;
-    this.posicion.y += this.velocidad.y;
+  public void mover(float deltaTime){
+    this.posicion.x += this.velocidad.x * deltaTime;
+    this.posicion.y += this.velocidad.y * deltaTime;
     validarRebote();
   }
   private void validarRebote(){
